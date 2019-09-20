@@ -97,7 +97,7 @@ a {
     display: none;
     width: 45px;
     height: 45px;
-    background: #afca57;
+    background: grey;
     cursor: pointer;
     top: 3px;
     right: 3px;
@@ -170,7 +170,8 @@ a {
 .header {
     position: absolute;
     width: 100%;
-    top: 40px;
+    background-color: white;
+    padding: 25px 0px;
 }
 
 .header .container1 {
@@ -216,75 +217,144 @@ a {
     color: #10c9c3;
 }
 
-/* star theader main */
+/* end header block */
 
-.header-main {
+/* start skill */
+
+.skill {
     width: 100%;
+    background-color: #f8f9f9;
+}
+
+.skill>.container {
+    flex-direction: row;
     display: flex;
-    margin-left: auto;
-    background-color: #e9e9e9;
-}
-
-.main-wrap {
-    padding: 237px 20px 60px 20px;
-    max-width: 520px;
+    justify-content: space-around;
+    align-items: center;
+    height: 570px;
+    max-width: 1366px;
     width: 100%;
-    margin: 0 auto;
-    text-align: center;
 }
 
-.main__title {
-    font-size: 36px;
+.skill-leftblock {
+    text-align: left;
+    padding: 0px 70px;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    /* padding: 127px 0px; */
+}
+
+.aboutus-header {
+    margin-bottom: 35px;
+    font-size: 30px;
     color: #1d1d1d;
     font-family: "MyriadProRegular";
+    font-weight: bold;
 }
 
-.main__text {
-    font-size: 18px;
-    color: #787878;
-    padding: 34px 0px 39px 0px;
-    line-height: 1.5;
+.skill-rightblock {
+    height: 100%;
+    width: 50%;
+    background-color: gray;
 }
 
-/* end header main */
-
-/* start foto block  */
-
-.fotoblock {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+.skill__items-first {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #787878
 }
 
-.fotoblock__item {
+.skill-data {
+    font-weight: Bold;
+    font-size: 15px;
+}
+
+.skill__items-second {
+    font-size: 16px;
+    margin-bottom: 40px;
+    color: #787878
+}
+
+.signature {
+    width: 50%;
+}
+
+.skill__border {
     position: relative;
-    width: 25%;
-    height: 300px;
-    display: block;
+    margin: 20px 0;
+    width: 500px;
+    height: 2px;
+    background-color: #d8d8d8;
 }
 
-.fotoblock__item::after {
-    position: absolute;
-    display: none;
-    content: '';
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #000;
-    opacity: .5;
+.skill__border:last-child {
+    margin-bottom: 0px;
 }
 
-.fotoblock__item:hover::after {
-    display: block;
-}
-
-.fotoblock__image {
+.image {
     width: 100%;
     height: 100%;
 }
 
-/* end foto block */
+.slider-img {
+    width: 100%;
+}
+
+.skill-button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.design::after {
+    content: "";
+    position: absolute;
+    width: 75%;
+    height: 2px;
+    background-color: #10c9c3;
+}
+
+.development::after {
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 2px;
+    background-color: #10c9c3;
+}
+
+.marketing::after {
+    content: "";
+    position: absolute;
+    width: 65%;
+    height: 2px;
+    background-color: #10c9c3;
+}
+
+/* end skill */
+
+/* java slider  */
+
+.class {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1366px;
+    width: 100%;
+    padding-bottom: 70px;
+}
+
+.js-reviews__item {
+    display: flex;
+    width: 100%;
+    padding-top: 70px;
+    padding-bottom: 110px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* end java slider */
 
 /* start copiright block */
 
@@ -354,19 +424,19 @@ a {
 
 /*  end copiright block  */
 
-/* mobileversia */
-
-@media(max-width: 475px) {
-    .hide-nav {
-        background: grey;
+@media(max-width: 575px) {
+    .js-reviews__item {
+        flex-direction: column;
+        padding: 100px 0px 0px 0px;
     }
-    .header-nav {
-        background: white;
+    .skill-leftblock {
+        text-align: center;
+        padding: 0px;
+        padding: 0px 20px 0px 20px;
+        width: 100%;
     }
-    .main__title {
-        font-size: 26px;
-        color: #1d1d1d;
-        font-family: "MyriadProRegular";
+    .skill-rightblock {
+        width: 100%;
     }
     @media(max-width: 375px) {
         .hide-nav {
@@ -379,9 +449,6 @@ a {
             top: 3px;
             right: 45px;
         }
-        .header-main {
-            padding-top: 55px;
-        }
         .main__title {
             font-size: 26px;
             color: #1d1d1d;
@@ -393,10 +460,9 @@ a {
             width: 100%;
             margin-left: auto;
             text-align: center;
-            flex-direction: column;
         }
-        .fotoblock__item {
-            width: 100%;
+        .js-reviews__item {
+            flex-direction: column;
         }
         /* copiright start  */
         .copiright-wrap {
